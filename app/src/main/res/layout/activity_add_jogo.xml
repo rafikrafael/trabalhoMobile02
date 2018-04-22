@@ -66,7 +66,7 @@
 
             <EditText
                 android:id="@+id/editNumero"
-                android:layout_width="68dp"
+                android:layout_width="59dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="number"
@@ -74,11 +74,11 @@
 
             <Button
                 android:id="@+id/btnAddNumero"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="111dp"
+                android:layout_height="44dp"
                 android:layout_weight="1"
-                android:text="Adicionar"
-                android:onClick="btnAdicionarNumeroClicked"/>
+                android:onClick="btnAdicionarNumeroClicked"
+                android:text="Incluir" />
             />
 
             <Button
@@ -86,7 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Limpar Numeros"
+                android:text="Rem. Ultimo"
                 android:onClick="btnLimparNumerosClicked"/>
         </LinearLayout>
 

@@ -122,24 +122,31 @@ public class AddJogo extends AppCompatActivity {
         finish();
     }
 
+    public void mostraNumeros() {
+        String num = "";
+        for (Integer numero: numeros) {
+            if (!num.equals("")) {
+                num += " ";
+            }
+            num += numero.toString();
+        }
+        editNumeros.setText(num);
+    }
+
     public void btnAdicionarNumeroClicked(View view){
         if (!editNumero.getText().equals("")) {
             numeros.add(Integer.valueOf(editNumero.getText().toString()));
-            String num = "";
-            for (Integer numero: numeros) {
-                if (!num.equals("")) {
-                    num += " ";
-                }
-                num += numero.toString();
-            }
-            editNumeros.setText(num);
+
+            mostraNumeros();
             editNumero.setText("");
         }
     }
 
     public void btnLimparNumerosClicked(View view){
-        numeros.clear();
-        editNumeros.setText("");
+        if (numeros.size() > 0) {
+            numeros.remove(numeros.size()-1);
+        }
+        mostraNumeros();
     }
 
     DatePickerDialog.OnDateSetListener datePickerListener = new DatePickerDialog.OnDateSetListener() {
